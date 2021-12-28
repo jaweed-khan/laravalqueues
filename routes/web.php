@@ -17,7 +17,7 @@ Route::get('/', function () {
 
     //(new \App\Jobs\SendWelcomeEmail())->handle();
 
-    \App\Jobs\SendWelcomeEmail::dispatch()->delay(5);
+    \App\Jobs\SendWelcomeEmail::dispatch();
 
     return view('welcome');
 });
