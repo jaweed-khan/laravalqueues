@@ -17,9 +17,11 @@ Route::get('/', function () {
 
     //(new \App\Jobs\SendWelcomeEmail())->handle();
 
-    foreach(range(1,100)as $i){
-        \App\Jobs\SendWelcomeEmail::dispatch();
-    }
+    // foreach(range(1,100)as $i){
+    //     \App\Jobs\SendWelcomeEmail::dispatch();
+    // }
+
+    \App\Jobs\SendWelcomeEmail::dispatch();
 
     
 

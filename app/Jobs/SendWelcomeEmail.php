@@ -14,6 +14,13 @@ class SendWelcomeEmail implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     /**
+     * retrying it for 2 seconds and then 10 seconds and then 20 seconds
+     */
+    //public $backoff = [2, 10, 20];
+
+    public $tries = 1; // retry 1 time
+
+    /**
      * Create a new job instance.
      *
      * @return void
